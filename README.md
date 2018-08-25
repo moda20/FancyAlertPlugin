@@ -38,15 +38,15 @@ The `FancyAlertPlugin` has only one method : `prompt`. `prompt`takes 3 arguments
 ```
 FancyAlertPlugin.prompt(Args,SuccessCallback,ErrorCallback)
 
-Args : Array of STRINGS: [ 'PROMPT MESSAGE', 'PROMPT TITLE', 'PROMPT TYPE', 'PROMPT BUTTON TEXT' ]
+Args : Array of STRINGS: [ 'PROMPT_MESSAGE', 'PROMPT_TITLE', 'PROMPT_TYPE', 'PROMPT_BUTTON_TEXT' ]
 
-PROMPT TYPE can only be one of : 'sucess' => Sucess Prompt
+PROMPT_TYPE can only be one of : 'sucess' => Sucess Prompt
                                  'info' => Info Prompt
                                  'help' => Help Prompt
                                  'error' => Error Prompt
                                  'warning' => Warning Prompt
                                  
-if PROMPT TYPE is passed as any other type or value, the plugin will send back an error.
+if PROMPT_TYPE is passed as any other type or value, the plugin will send back an error.
 
 SuccessCallback and ErrorCallback are regular callbacks, see the example above.
 ```
