@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-fancyAlert",
-  "version": "0.1.0",
-  "description": "",
+  "name": "cordova-plugin-fancyalert",
+  "version": "0.1.1",
+  "description": " a Cordova plugin based on ColorDialog",
   "cordova": {
-    "id": "cordova-plugin-fancyAlert",
+    "id": "cordova-plugin-fancyalert",
     "platforms": [
       "android"
     ]
@@ -12,6 +12,6 @@
     "ecosystem:cordova",
     "cordova-android"
   ],
-  "author": "",
+  "author": "moda20",
   "license": "ISC"
 }

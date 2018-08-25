@@ -5,7 +5,7 @@ Color Dialog : https://github.com/andyxialm/ColorDialog
 
 
 **Cordova plugin : Fancy Alerts** 
-This plugin is not yet available on NPM or via the cordova CLI.
+This plugin is available on NPM on https://www.npmjs.com/package/cordova-plugin-fancyalert .
 
 Platforms available : **android**
 
