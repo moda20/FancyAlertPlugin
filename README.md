@@ -50,6 +50,13 @@ if PROMPT_TYPE is passed as any other type or value, the plugin will send back a
 SuccessCallback and ErrorCallback are regular callbacks, see the example above.
 ```
 
+# ChangeLog
+
+- V 0.1.2 : 
+    - Added prompt function argument validation.
+    - Dismissing the prompt with the button tap will result in a success callback with the message `"dismissed"
+
+
 # Licence 
 
 MIT

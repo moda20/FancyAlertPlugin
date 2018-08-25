@@ -97,6 +97,13 @@ public class FancyAlertPlugin extends CordovaPlugin {
 
     private void prompt(String message, String title, String type ,String bttext,CallbackContext callbackContext) {
         PromptDialog PD = new PromptDialog(cordova.getActivity());
+                if(message == null && message.length() == 0 ||
+                 title == null && title.length() == 0
+                 || type == null && type.length() == 0
+                 || bttext == null && bttext.length() == 0 ){
+                    callbackContext.error("Expected one non-empty string argument.");
+                    return;
+                }
 
                 if(type.equals("sucess")){
                     PD.setDialogType(PromptDialog.DIALOG_TYPE_SUCCESS);
@@ -126,6 +133,7 @@ public class FancyAlertPlugin extends CordovaPlugin {
                             @Override
                             public void onClick(PromptDialog dialog) {
                                 dialog.dismiss();
+                                callbackContext.success("dismissed");
                             }
                         }).show();
     }
