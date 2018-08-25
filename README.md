@@ -30,7 +30,7 @@ window.cordova.plugins.FancyAlertPlugin.prompt(['Message Message Message Message
             alert("Errored");
         })
 ```
-*** Docs :***
+***Docs :***
 ```
 The `FancyAlertPlugin` has only one method : `prompt`. `prompt`takes 3 arguments only the first is mandatory.
 
