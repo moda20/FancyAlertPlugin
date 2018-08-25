@@ -1,0 +1,25 @@
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
+}
+dependencies {
+    compile 'com.github.andyxialm:ColorDialog:1.0.0'
+}
+
+/*
+android {
+    compileSdkVersion 24
+    buildToolsVersion "26.0.1"
+
+    defaultConfig {
+        applicationId "cordova-plugin-fancyAlert"
+        minSdkVersion 14
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+}*/

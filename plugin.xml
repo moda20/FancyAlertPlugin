@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova.plugin.fancyalert" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>FancyAlertPlugin</name>
+    <js-module name="FancyAlertPlugin" src="www/FancyAlertPlugin.js">
+        <clobbers target="cordova.plugins.FancyAlertPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="FancyAlertPlugin">
+                <param name="android-package" value="cordova.plugin.fancyalert.FancyAlertPlugin" />
+            </feature></config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/FancyAlertPlugin.java" target-dir="src/cordova-plugin-fancyAlert/FancyAlertPlugin" />
+        <!--<source-file src="src/android/ColorDialog/src/main/java/cn/refactor/lib/colordialog/AnimationLoader.java" target-dir="src/cordova-plugin-fancyAlert/FancyAlertPlugin/java/cn/refactor/lib/colordialog/" />
+        <source-file src="src/android/ColorDialog/src/main/java/cn/refactor/lib/colordialog/ColorDialog.java" target-dir="src/cordova-plugin-fancyAlert/FancyAlertPlugin/java/cn/refactor/lib/colordialog/" />
+        <source-file src="src/android/ColorDialog/src/main/java/cn/refactor/lib/colordialog/PromptDialog.java" target-dir="src/cordova-plugin-fancyAlert/FancyAlertPlugin/java/cn/refactor/lib/colordialog/" />
+        <source-file src="src/android/ColorDialog/src/main/java/cn/refactor/lib/colordialog/util/DisplayUtil.java" target-dir="src/cordova-plugin-fancyAlert/FancyAlertPlugin/java/cn/refactor/lib/colordialog/util" />
+        <resource-file src="src/android/ColorDialog/src/main/" target="src/cordova-plugin-fancyAlert/FancyAlertPlugin/res" />-->
+        <framework src="com.android.support:appcompat-v7:27.1.1"/>
+        <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    </platform>
+</plugin>
