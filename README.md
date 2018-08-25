@@ -29,13 +29,12 @@ window.cordova.plugins.FancyAlertPlugin.prompt(['Message Message Message Message
             console.log(e);
             alert("Errored");
         })
-
+```
 *** Docs :***
-
+```
 The `FancyAlertPlugin` has only one method : `prompt`. `prompt`takes 3 arguments only the first is mandatory.
 
-```
-```
+
 FancyAlertPlugin.prompt(Args,SuccessCallback,ErrorCallback)
 
 Args : Array of STRINGS: [ 'PROMPT_MESSAGE', 'PROMPT_TITLE', 'PROMPT_TYPE', 'PROMPT_BUTTON_TEXT' ]
