@@ -10,7 +10,7 @@ This plugin is not yet available on NPM or via the cordova CLI.
 Platforms available : **android**
 
 
-**install**
+***install :***
 
 1 ) run `cordova plugin add https://github.com/moda20/FancyAlertPlugin.git`
 
