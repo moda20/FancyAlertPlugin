@@ -36,6 +36,15 @@ public class FancyAlertPlugin extends CordovaPlugin {
                 String bttext = args.getString(3);
                 this.prompt(message,title,type,bttext,callbackContext);
                 return true;
+            }else{
+            if(action.equals("Dialog")){
+                            String message = args.getString(0);
+                            String title = args.getString(1);
+                            String color = args.getString(2);
+                            String bttext = args.getString(3);
+                            this.Dialog(message,title,color,bttext,callbackContext);
+                            return true;
+                        }
             }
         }
         return false;
@@ -121,6 +130,7 @@ public class FancyAlertPlugin extends CordovaPlugin {
                                     PD.setDialogType(PromptDialog.DIALOG_TYPE_WARNING);
                                 }else{
                                     callbackContext.error("Bad type passed");
+                                    return;
                                 }
                             }
                         }
@@ -136,5 +146,20 @@ public class FancyAlertPlugin extends CordovaPlugin {
                                 callbackContext.success("dismissed");
                             }
                         }).show();
+    }
+
+    private void Dialog(String message, String title, String color ,String okbttext,CallbackContext callbackContext){
+        ColorDialog dialog = new ColorDialog(cordova.getActivity());
+                dialog.setColor(color);
+                dialog.setAnimationEnable(true);
+                dialog.setTitle(title);
+                dialog.setContentText(message);
+                dialog.setPositiveListener(okbttext, new ColorDialog.OnPositiveListener() {
+                    @Override
+                    public void onClick(ColorDialog dialog) {
+                        dialog.dismiss();
+                        callbackContext.success("dismissed");
+                    }
+                }).show();
     }
 }

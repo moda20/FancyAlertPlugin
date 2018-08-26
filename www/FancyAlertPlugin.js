@@ -9,3 +9,8 @@ exports.coolMethod = function (arg0, success, error) {
 exports.prompt = function (args, success, error) {
     exec(success, error, 'FancyAlertPlugin', 'prompt', args);
 };
+
+exports.dialog = function (args, success, error) {
+    exec(success, error, 'FancyAlertPlugin', 'Dialog', args);
+};
+
