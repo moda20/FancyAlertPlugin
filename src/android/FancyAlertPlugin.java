@@ -106,11 +106,12 @@ public class FancyAlertPlugin extends CordovaPlugin {
 
     private void prompt(String message, String title, String type ,String bttext,CallbackContext callbackContext) {
         PromptDialog PD = new PromptDialog(cordova.getActivity());
+        final CallbackContext CB = callbackContext;
                 if(message == null && message.length() == 0 ||
                  title == null && title.length() == 0
                  || type == null && type.length() == 0
                  || bttext == null && bttext.length() == 0 ){
-                    callbackContext.error("Expected one non-empty string argument.");
+                    CB.error("Expected one non-empty string argument.");
                     return;
                 }
 
@@ -129,7 +130,7 @@ public class FancyAlertPlugin extends CordovaPlugin {
                                 if(type.equals("warning")){
                                     PD.setDialogType(PromptDialog.DIALOG_TYPE_WARNING);
                                 }else{
-                                    callbackContext.error("Bad type passed");
+                                    CB.error("Bad type passed");
                                     return;
                                 }
                             }
@@ -143,12 +144,21 @@ public class FancyAlertPlugin extends CordovaPlugin {
                             @Override
                             public void onClick(PromptDialog dialog) {
                                 dialog.dismiss();
-                                callbackContext.success("dismissed");
+                                CB.success("dismissed");
                             }
                         }).show();
     }
 
     private void Dialog(String message, String title, String color ,String okbttext,CallbackContext callbackContext){
+     final CallbackContext CB = callbackContext;
+        if(message == null && message.length() == 0 ||
+         title == null && title.length() == 0
+         || color == null && color.length() == 0
+         || okbttext == null && okbttext.length() == 0 ){
+            CB.error("Expected one non-empty string argument.");
+            return;
+        }
+
         ColorDialog dialog = new ColorDialog(cordova.getActivity());
                 dialog.setColor(color);
                 dialog.setAnimationEnable(true);
@@ -158,7 +168,7 @@ public class FancyAlertPlugin extends CordovaPlugin {
                     @Override
                     public void onClick(ColorDialog dialog) {
                         dialog.dismiss();
-                        callbackContext.success("dismissed");
+                        CB.success("dismissed");
                     }
                 }).show();
     }

@@ -83,11 +83,12 @@ The `FancyAlertPlugin` has only Two method : `prompt` and `dialog`. `prompt`take
     - Added prompt function argument validation.
     - Dismissing the prompt with the button tap will result in a success callback with the message `"dismissed"
 
-
 - V 0.2.0 : 
     - Added Colored Dialog feature, see docs.
 
-              
+- V 0.2.1 :
+    - Fixed Compiling Bug when using android studio build.
+    - Added Dialog Argument Validation.      
      
     
 # Licence 
