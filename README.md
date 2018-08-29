@@ -76,6 +76,13 @@ The `FancyAlertPlugin` has only Two method : `prompt` and `dialog`. `prompt`take
     
     SuccessCallback and ErrorCallback are regular callbacks, see the example above.
 ```
+```
+Plugin.xml :
+
+You may have to change the com.android.support:appcompat-v7:27.1.1 to a certain version.
+Note that this version needs to be unique with all components in your app, so make sure you have it fixed.
+
+```
 
 # ChangeLog
 
@@ -89,7 +96,10 @@ The `FancyAlertPlugin` has only Two method : `prompt` and `dialog`. `prompt`take
 - V 0.2.1 :
     - Fixed Compiling Bug when using android studio build.
     - Added Dialog Argument Validation.      
-     
+
+- V 0.2.1 :
+    - README fix.
+    - Plugin Version fix.   
     
 # Licence 
 
