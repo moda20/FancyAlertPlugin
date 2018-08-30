@@ -84,6 +84,33 @@ Note that this version needs to be unique with all components in your app, so ma
 
 ```
 
+### Screenshots:
+
+* PromptDialog Success
+
+![](https://github.com/andyxialm/ColorDialog/blob/master/art/Screenshot_type_success.png?raw=true )
+
+* PromptDialog Info
+
+![](https://github.com/andyxialm/ColorDialog/blob/master/art/Screenshot_type_info.png?raw=true)
+
+* PromptDialog Help
+
+![](https://github.com/andyxialm/ColorDialog/blob/master/art/Screenshot_type_help.png?raw=true)
+
+* PromptDialog Error
+
+![](https://github.com/andyxialm/ColorDialog/blob/master/art/Screenshot_type_error.png?raw=true)
+
+* PromptDialog Warning
+
+![](https://github.com/andyxialm/ColorDialog/blob/master/art/Screenshot_type_warning.png?raw=true)
+
+
+* ColorDialog Text Mode
+
+![](https://github.com/andyxialm/ColorDialog/blob/master/art/Screenshot_text.png?raw=true)
+
 # ChangeLog
 
 - V 0.1.2 : 
